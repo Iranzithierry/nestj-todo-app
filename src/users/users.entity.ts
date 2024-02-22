@@ -1,21 +1,18 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: "todos"})
-export class Todo {
+@Entity({ name: "users" })
+export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  title: string;
+  username: string;
 
   @Column()
-  content: string;
-
+  password: string;
+  
   @Column({ default: null })
-  ownedBy: number;
-
-  @Column({ default: null })
-  checkedAt: Date;
+  apiKey: string;
 
   @Column()
   createdAt: Date;

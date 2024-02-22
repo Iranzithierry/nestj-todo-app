@@ -6,6 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppService } from './app.service';
 import { AppController } from './app.controller';
 import { TodoModule } from './todo/todo.module';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   // imports: [TodoModule],
@@ -25,6 +27,8 @@ import { TodoModule } from './todo/todo.module';
       synchronize: true,
     }),
     TodoModule,
+    AuthModule,
+    UsersModule,
   ],
 })
 export class AppModule {}
